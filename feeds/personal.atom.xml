@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>HastiSoltani - Personal</title><link href="https://hasti-soltani.github.io/" rel="alternate"/><link href="https://hasti-soltani.github.io/feeds/personal.atom.xml" rel="self"/><id>https://hasti-soltani.github.io/</id><updated>2026-10-30T10:00:00+03:30</updated><entry><title>About Me</title><link href="https://hasti-soltani.github.io/about-me.html" rel="alternate"/><published>2026-10-30T10:00:00+03:30</published><updated>2026-10-30T10:00:00+03:30</updated><author><name>Hasti Soltani</name></author><id>tag:hasti-soltani.github.io,2026-10-30:/about-me.html</id><content type="html">&lt;p&gt;Hello and welcome to my personal website!&lt;/p&gt;
+&lt;p&gt;My name is Hasti Soltani. I am a student, and this website is a place where I can share my interests, experiences, projects, and ideas.&lt;/p&gt;
+&lt;p&gt;I created this website using Python, Pelican, and GitHub Pages.&lt;/p&gt;
+&lt;p&gt;Thank you for visiting!&lt;/p&gt;</content><category term="Personal"/></entry></feed>
