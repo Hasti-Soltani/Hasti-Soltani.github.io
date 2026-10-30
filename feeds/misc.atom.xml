@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>HastiSoltani - misc</title><link href="https://hasti-soltani.github.io/" rel="alternate"/><link href="https://hasti-soltani.github.io/feeds/misc.atom.xml" rel="self"/><id>https://hasti-soltani.github.io/</id><updated>2026-10-30T00:00:00+03:30</updated><entry><title>Hasti Soltani - Personal Website</title><link href="https://hasti-soltani.github.io/about-hasti.html" rel="alternate"/><published>2026-10-30T00:00:00+03:30</published><updated>2026-10-30T00:00:00+03:30</updated><author><name>Hasti Soltani</name></author><id>tag:hasti-soltani.github.io,2026-10-30:/about-hasti.html</id><summary type="html">&lt;h1&gt;Hasti Soltani&lt;/h1&gt;
+&lt;h3&gt;Artificial Intelligence &amp;amp; Soft Computing Graduate Student&lt;/h3&gt;
+&lt;p&gt;Welcome to my personal website!&lt;/p&gt;
+&lt;p&gt;I am a Master's student in Artificial Intelligence and Soft Computing at Ferdowsi University of Mashhad, Iran.&lt;/p&gt;
+&lt;p&gt;I am passionate about programming, technology, and artificial intelligence. I enjoy learning new tools, improving my technical skills, and exploring …&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Hasti Soltani&lt;/h1&gt;
+&lt;h3&gt;Artificial Intelligence &amp;amp; Soft Computing Graduate Student&lt;/h3&gt;
+&lt;p&gt;Welcome to my personal website!&lt;/p&gt;
+&lt;p&gt;I am a Master's student in Artificial Intelligence and Soft Computing at Ferdowsi University of Mashhad, Iran.&lt;/p&gt;
+&lt;p&gt;I am passionate about programming, technology, and artificial intelligence. I enjoy learning new tools, improving my technical skills, and exploring computational methods to solve real-world problems.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;Education&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Master's Student in Artificial Intelligence and Soft Computing&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Ferdowsi University of Mashhad, Iran&lt;/p&gt;
+&lt;h2&gt;Skills &amp;amp; Technical Tools&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Python&lt;/li&gt;
+&lt;li&gt;Git and GitHub&lt;/li&gt;
+&lt;li&gt;HTML and CSS&lt;/li&gt;
+&lt;li&gt;Microsoft Office&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Academic &amp;amp; Personal Projects&lt;/h2&gt;
+&lt;h3&gt;Personal Website&lt;/h3&gt;
+&lt;p&gt;Designed and developed this website using Python, Pelican, and GitHub Pages.&lt;/p&gt;
+&lt;p&gt;Through this project, I gained practical experience with static site generation, version control, and web publishing.&lt;/p&gt;
+&lt;h2&gt;Interests&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Artificial Intelligence&lt;/li&gt;
+&lt;li&gt;Programming&lt;/li&gt;
+&lt;li&gt;Emerging Technologies&lt;/li&gt;
+&lt;li&gt;Computational Methods&lt;/li&gt;
+&lt;li&gt;Continuous Learning&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Blog &amp;amp; Technical Notes&lt;/h2&gt;
+&lt;p&gt;I plan to share technical notes, learning experiences, and reflections on programming and artificial intelligence here.&lt;/p&gt;
+&lt;h2&gt;Contact&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;GitHub:&lt;/strong&gt; &lt;a href="https://github.com/Hasti-Soltani"&gt;Hasti-Soltani&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Thank you for visiting my website!&lt;/p&gt;</content><category term="misc"/></entry></feed>
