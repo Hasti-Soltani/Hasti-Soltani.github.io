@@ -3,22 +3,158 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>صفحه شخصی من</title>
+  <meta name="description" content="صفحه شخصی نام و نام خانوادگی؛ معرفی، مهارت‌ها، پروژه‌ها و یادداشت‌ها">
+  <title>هستی سلزانی | صفحه شخصی</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;800&display=swap" rel="stylesheet">
   <style>
-    body { font-family: Tahoma, sans-serif; max-width: 700px; margin: 0 auto; padding: 1rem; line-height: 1.8; }
-    h1 { color: #2a5db0; }
-    a { color: #2a5db0; }
+    :root {
+      --bg: #f7f8fa;
+      --surface: #ffffff;
+      --ink: #1d2433;
+      --muted: #5b6577;
+      --line: #dde1e8;
+      --accent: #1f6f8b;
+      --accent-soft: #e3f0f4;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #141922;
+        --surface: #1b212c;
+        --ink: #e8ebf0;
+        --muted: #98a2b3;
+        --line: #2b3342;
+        --accent: #6cc3dc;
+        --accent-soft: #1d2f38;
+      }
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: "Vazirmatn", Tahoma, sans-serif;
+      line-height: 1.9;
+      font-size: 17px;
+    }
+    a { color: var(--accent); text-underline-offset: 4px; }
+    a:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+
+    header.top {
+      border-bottom: 1px solid var(--line);
+      background: var(--surface);
+    }
+    nav {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0.9rem 1.25rem;
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      font-size: 0.95rem;
+    }
+    nav a { color: var(--muted); text-decoration: none; }
+    nav a:hover { color: var(--accent); }
+
+    main { max-width: 760px; margin: 0 auto; padding: 0 1.25rem 4rem; }
+
+    .hero { padding: 4rem 0 3rem; }
+    .hero h1 {
+      font-size: clamp(2.2rem, 7vw, 3.6rem);
+      line-height: 1.25;
+      font-weight: 800;
+      margin: 0 0 0.75rem;
+    }
+    .hero p.role { font-size: 1.2rem; color: var(--muted); margin: 0 0 1.5rem; }
+    .hero p.bio { max-width: 60ch; margin: 0; }
+
+    section { padding: 2.25rem 0; border-top: 1px solid var(--line); }
+    h2 { font-size: 1.5rem; margin: 0 0 1.1rem; }
+
+    .tags { display: flex; flex-wrap: wrap; gap: 0.6rem; padding: 0; margin: 0; list-style: none; }
+    .tags li {
+      background: var(--accent-soft);
+      color: var(--accent);
+      padding: 0.15rem 0.9rem;
+      border-radius: 999px;
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+
+    .item { padding: 1rem 0; border-bottom: 1px dashed var(--line); }
+    .item:last-child { border-bottom: 0; }
+    .item h3 { margin: 0 0 0.2rem; font-size: 1.1rem; }
+    .item p { margin: 0; color: var(--muted); font-size: 0.98rem; }
+    .item .meta { font-size: 0.85rem; color: var(--muted); }
+
+    .links { display: flex; flex-wrap: wrap; gap: 0.75rem; padding: 0; margin: 0; list-style: none; }
+    .links a {
+      display: inline-block;
+      padding: 0.45rem 1.1rem;
+      border: 1px solid var(--line);
+      background: var(--surface);
+      border-radius: 8px;
+      text-decoration: none;
+      color: var(--ink);
+      font-weight: 500;
+    }
+    .links a:hover { border-color: var(--accent); color: var(--accent); }
+
+    footer { text-align: center; color: var(--muted); font-size: 0.88rem; padding: 2rem 1rem; border-top: 1px solid var(--line); }
+
+    /* Latin text (emails, code) stays readable inside RTL */
+    .ltr { direction: ltr; unicode-bidi: embed; }
   </style>
 </head>
 <body>
-  <h1>هستی سلطانی</h1>
-  <p>ددانشجو ارشد هوش مصنوعی و محاسبات نرم دانشگاه فردوسی</p>
 
-  <h2>مهارت‌ها</h2>
-  <ul><li>پایتون</li><li>گیت</li><li>html</li></ul>
+  <header class="top">
+    <nav aria-label="منوی اصلی">
+      <a href="#about">درباره من</a>
+      <a href="#skills">مهارت‌ها</a>
+      <a href="#projects">پروژه‌ها</a>
+      <a href="#notes">یادداشت‌ها</a>
+      <a href="#contact">ارتباط</a>
+    </nav>
+  </header>
 
-  
-  <h2>پیوندها</h2>
-  <p><a href="https://github.com/Hasti-Soltani">GitHub</a> | <a href="#">LinkedIn</a></p>
+  <main>
+    <div class="hero" id="about">
+      <h1>هستی سلطانی</h1>
+      <p class="role">دانشجو مقطع ارشد محاسبات نرم و هوش مصنوعی دانشگاه فردوسی</p>
+      <p class="bio">
+        به ... و ... علاقه دارم. این‌جا پروژه‌های درسی، چیزهایی که یاد می‌گیرم
+        و راه‌های ارتباط با من را می‌بینید. در حال حاضر روی ... کار می‌کنم.
+      </p>
+    </div>
+
+    <section id="skills">
+      <h2>مهارت‌ها و ابزارها</h2>
+      <ul class="tags">
+        <li>Python</li>
+        <li>C</li>
+        <li>Git و GitHub</li>
+        <li>HTML و CSS</li>
+      
+      </ul>
+    </section>
+
+
+    
+
+    <section id="contact">
+      <h2>ارتباط با من</h2>
+      <ul class="links">
+        <li><a href="https://github.com/username">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/username">LinkedIn</a></li>
+        <li><a href="mailto:hastisoltaniy82@gmail.com">ایمیل</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>© ۱۴۰۵ نام و نام خانوادگی. ساخته‌شده با GitHub Pages</footer>
+
 </body>
 </html>
