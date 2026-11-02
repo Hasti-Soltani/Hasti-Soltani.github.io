@@ -9,6 +9,7 @@ image: photo.jpg
 
 - Python
 - C
+- c#
 - Git و GitHub
 - LaTeX
 - HTML و CSS
