@@ -19,7 +19,8 @@ title: هستی سلطانی
 - Python
 - Git و GitHub
 - HTML و CSS
--C
+- C
+
 
 ---
 
