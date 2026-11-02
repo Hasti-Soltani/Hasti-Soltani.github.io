@@ -4,7 +4,7 @@ title: هستی سلطانی
 subtitle: دانشجوی ارشد محاسبات نرم و هوش مصنوعی در دانشگاه فردوسی:
 image: photo.jpg
 ---
- 
+
 
 ## مهارت‌ها و ابزارها
 
@@ -29,9 +29,6 @@ image: photo.jpg
 
 </div>
 
-
-
-<div class="card" markdown="1">
 </div>
 
 ## ارتباط با من
