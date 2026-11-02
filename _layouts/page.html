@@ -3,34 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#3b2a8c">
+  <meta name="theme-color" content="#1d5a38">
   <title>{{ page.title }}</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #f6f4fb;
-      --surface: #ffffff;
-      --ink: #221b3a;
-      --muted: #655f7a;
-      --line: #e1dcef;
-      --accent: #6a4bd0;
-      --accent-soft: #ece7fb;
-      --hero-a: #2b1a63;
-      --hero-b: #5a3fc2;
+      --bg: #f6f2e8;
+      --surface: #fffdf8;
+      --ink: #1f2a22;
+      --muted: #5d665e;
+      --line: #e2dac6;
+      --accent: #a64a28;
+      --accent-soft: #f4e3d6;
+      --green: #2f7a4d;
+      --hero-a: #1d5a38;
+      --hero-b: #2f7a4d;
     }
     @media (prefers-color-scheme: dark) {
       :root {
-        --bg: #14101f;
-        --surface: #1d1830;
-        --ink: #ece9f5;
-        --muted: #a39ebb;
-        --line: #302a47;
-        --accent: #a48dff;
-        --accent-soft: #2a2347;
-        --hero-a: #1b1140;
-        --hero-b: #3b2a8c;
+        --bg: #121a15;
+        --surface: #1a251e;
+        --ink: #ecefe9;
+        --muted: #a3ada5;
+        --line: #2b3a30;
+        --accent: #e08a62;
+        --accent-soft: #3a2a21;
+        --green: #6cc58c;
+        --hero-a: #0f3822;
+        --hero-b: #1f5a3a;
+      
       }
     }
     * { box-sizing: border-box; }
@@ -51,6 +54,7 @@
       background: linear-gradient(135deg, var(--hero-a), var(--hero-b));
       color: #fff;
       padding: 4rem 1.25rem 4.5rem;
+      border-bottom: 5px solid #f4efe2;
     }
     .hero-inner {
       max-width: 760px;
@@ -95,7 +99,7 @@
       width: 6px;
       height: 1.4rem;
       border-radius: 3px;
-      background: var(--accent);
+      background: var(--green);
     }
     main > p:first-child { margin-top: 2.5rem; }
 
@@ -114,7 +118,7 @@
     .card {
       background: var(--surface);
       border: 1px solid var(--line);
-      border-inline-start: 5px solid var(--accent);
+      border-inline-start: 5px solid var(--green);
       border-radius: 12px;
       padding: 1.1rem 1.4rem;
       margin-bottom: 1.1rem;
