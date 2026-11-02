@@ -25,20 +25,13 @@ title: هستی سلطانی
 ---
 
 ## پروژه‌ها
+### [مسئله p-center](https://github.com/hasti-soltani/p-center-project)
 
-### [عنوان پروژه اول](https://github.com/username/project1)
+بررسی مسئله p-center و روش‌های حل آن. گزارش با LaTeX نوشته شده است.
+[دانلود گزارش (PDF)](https://github.com/hasti-soltani/p-center-project/blob/main/report.pdf)
 
-یک یا دو جمله: پروژه چه کاری انجام می‌دهد و چه ابزارهایی در آن استفاده شده است.
+*درس بهینه سازی پویا ۱۴۰۳*
 
-*درس ... | ۱۴۰۴*
-
-### [عنوان پروژه دوم](https://github.com/username/project2)
-
-توضیح کوتاه درباره مسئله‌ای که حل کرده‌اید و نتیجه‌ای که گرفتید.
-
-*پروژه شخصی*
-
----
 
 ## یادداشت‌ها
 
