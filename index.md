@@ -25,6 +25,17 @@ image: photo.jpg
 [مشاهده گزارش و فایل‌ها در GitHub](https://github.com/hasti-soltani/p-center-project)
 
 *درس بهینه‌سازی پویا، ۱۴۰۳*
+<div class="card" markdown="1">
+
+### [بازی چکرز](https://github.com/hasti-soltani/checkers-project)
+
+پیاده‌سازی بازی چکرز.
+
+[مشاهده کد در GitHub](https://github.com/hasti-soltani/checkers-project)
+
+*درس هوش مصنوعی ۱۴۰۲*
+
+</div>
 
 </div>
 
