@@ -28,8 +28,7 @@ title: هستی سلطانی
 ### [مسئله p-center](https://github.com/hasti-soltani/p-center-project)
 
 بررسی مسئله p-center و روش‌های حل آن. گزارش با LaTeX نوشته شده است.
-[دانلود گزارش (PDF)](https://github.com/hasti-soltani/p-center-project/blob/main/report.pdf)
-
+[دانلود گزارش (PDF)](https://github.com/Hasti-Soltani/p-center-project)
 *درس بهینه سازی پویا ۱۴۰۳*
 
 
