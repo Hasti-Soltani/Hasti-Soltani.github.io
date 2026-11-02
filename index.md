@@ -35,7 +35,18 @@ image: photo.jpg
 
 [مشاهده کد در GitHub](https://github.com/hasti-soltani/checkers-project)
 
-*درس هوش مصنوعی ۱۴۰۲*
+*درس هوش مصنوعی، ۱۴۰۲*
+
+</div>
+<div class="card" markdown="1">
+
+### [سودوکو](https://github.com/hasti-soltani/sudoku-project)
+
+حل سودوکو.
+
+[مشاهده کد در GitHub](https://github.com/hasti-soltani/sudoku-project)
+
+*درس هوش مصنوعی، ۱۴۰۲*
 
 </div>
 
