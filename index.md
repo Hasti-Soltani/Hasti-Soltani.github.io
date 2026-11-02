@@ -1,17 +1,16 @@
 ---
 layout: default
-title: نام و نام خانوادگی
+title: هستی سلطانی
 ---
 
 <div dir="rtl" markdown="1">
 
 ![عکس نام و نام خانوادگی](photo.jpg){: width="140" style="border-radius:50%"}
 
-# نام و نام خانوادگی
+#هستی سلطانی
 
-دانشجوی رشته ... در دانشگاه ...
+دانشجوی ارشد رشته محاسبات نرم و هوش مصنوعی در دانشگاه فردوسی
 
-به ... و ... علاقه دارم. اینجا پروژه‌های درسی، چیزهایی که یاد می‌گیرم و راه‌های ارتباط با من را می‌بینید. در حال حاضر روی ... کار می‌کنم.
 
 ---
 
@@ -19,9 +18,8 @@ title: نام و نام خانوادگی
 
 - Python
 - Git و GitHub
-- LaTeX
 - HTML و CSS
-- تحلیل داده
+-C
 
 ---
 
@@ -45,16 +43,11 @@ title: نام و نام خانوادگی
 
 ### ساخت اولین صفحه شخصی با GitHub Pages
 
-امروز یاد گرفتم یک repository با نام `username.github.io` چطور به یک سایت واقعی تبدیل می‌شود. سخت‌ترین بخش، پیدا کردن نام درست repository بود.
-
-*آبان ۱۴۰۵*
-
+ا
 ---
 
 ## ارتباط با من
 
-- [GitHub](https://github.com/username)
-- [LinkedIn](https://www.linkedin.com/in/username)
-- [ایمیل](mailto:you@example.com)
+- [GitHub](https://github.com/hasti-soltani)
 
-</div>
+  
