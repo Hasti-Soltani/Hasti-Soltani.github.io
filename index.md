@@ -9,7 +9,6 @@ title: Hasti Soltani
 
 <div>
 <div class="section-label">01 / About</div>
-<h1 class="about-heading">Curious by nature.</h1>
 </div>
 
 <div class="about-content">
@@ -23,10 +22,12 @@ title: Hasti Soltani
 <span class="meta-label">FIELD</span>
 <span class="meta-value">Computer Science</span>
 </div>
+
 <div>
 <span class="meta-label">FOCUS</span>
 <span class="meta-value">AI & Optimization</span>
 </div>
+
 <div>
 <span class="meta-label">APPROACH</span>
 <span class="meta-value">Learn, build, improve</span>
@@ -90,7 +91,7 @@ title: Hasti Soltani
 
 <div>
 <div class="section-label">04 / Interests</div>
-<h2 class="section-title">Questions that interest me.</h2>
+<h2 class="section-title">Research interests.</h2>
 </div>
 
 <div>
@@ -109,54 +110,51 @@ title: Hasti Soltani
 <div class="section-inner">
 
 <div class="section-label">05 / Selected Work</div>
-<h2 class="section-title">Things I've built.</h2>
+<h2 class="section-title">Academic projects.</h2>
 
 <div class="project-list">
 
 <div class="project-card" markdown="1">
 <h3>k-Nearest Neighbors</h3>
+
 <p>An implementation of the k-nearest neighbors (KNN) algorithm, built for the Machine Learning course.</p>
-<a class="project-link" href="https://github.com/hasti-soltani/knn">View code on GitHub ↗</a>
+
+<a class="project-link" href="https://github.com/hasti-soltani/knn" target="_blank" rel="noopener noreferrer">View code on GitHub ↗</a>
+
 <em>Machine Learning · 2026</em>
 </div>
 
 <div class="project-card" markdown="1">
 <h3>The p-center problem</h3>
+
 <p>A study of the p-center problem and methods for solving it. The report is written in LaTeX.</p>
-<a class="project-link" href="https://github.com/hasti-soltani/p-center-project">View report and files ↗</a>
+
+<a class="project-link" href="https://github.com/hasti-soltani/p-center-project" target="_blank" rel="noopener noreferrer">View report and files ↗</a>
+
 <em>Dynamic Optimization · 2024</em>
 </div>
 
 <div class="project-card" markdown="1">
 <h3>Checkers</h3>
+
 <p>An implementation of the game of checkers, built for the Artificial Intelligence course.</p>
-<a class="project-link" href="https://github.com/hasti-soltani/checkers-project">View code on GitHub ↗</a>
+
+<a class="project-link" href="https://github.com/hasti-soltani/checkers-project" target="_blank" rel="noopener noreferrer">View code on GitHub ↗</a>
+
 <em>Artificial Intelligence · 2023</em>
 </div>
 
 <div class="project-card" markdown="1">
 <h3>Sudoku Solver</h3>
+
 <p>A Sudoku solver built for the Artificial Intelligence course.</p>
-<a class="project-link" href="https://github.com/hasti-soltani/sudoku-project">View code on GitHub ↗</a>
+
+<a class="project-link" href="https://github.com/hasti-soltani/sudoku-project" target="_blank" rel="noopener noreferrer">View code on GitHub ↗</a>
+
 <em>Artificial Intelligence · 2023</em>
 </div>
 
 </div>
-</div>
-</section>
-
-<section id="notes" class="section notes-section" markdown="1">
-<div class="section-inner">
-
-<div class="section-label">06 / Notes</div>
-<h2 class="section-title">Things I'm learning.</h2>
-
-<div class="note-item">
-<h3>Building my first personal page with GitHub Pages</h3>
-<p>I learned that a repository named <code>username.github.io</code> turns into a real website. The most important detail was getting the repository name exactly right.</p>
-<em>November 2026</em>
-</div>
-
 </div>
 </section>
 
@@ -164,7 +162,7 @@ title: Hasti Soltani
 <div class="section-inner two-column">
 
 <div>
-<div class="section-label">07 / Contact</div>
+<div class="section-label">06 / Contact</div>
 <h2 class="section-title">Let's connect.</h2>
 </div>
 
