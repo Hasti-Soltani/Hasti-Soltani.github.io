@@ -1,68 +1,110 @@
 ---
 layout: page
-title: هستی سلطانی
-subtitle: دانشجوی ارشد محاسبات نرم و هوش مصنوعی در دانشگاه فردوسی
+title: Hasti Soltani
+subtitle: Master's student in Soft Computing and Artificial Intelligence at Ferdowsi University
 image: photo.jpg
 ---
 
-## مهارت‌ها و ابزارها
+I study soft computing and artificial intelligence, and my coursework has focused on optimization and machine learning. This page collects my projects and the things I am learning.
+
+## Education
+
+<div class="card" markdown="1">
+
+### M.Sc. in Soft Computing and Artificial Intelligence
+
+Ferdowsi University of Mashhad
+
+</div>
+
+<div class="card" markdown="1">
+
+### B.Sc. in Computer Science
+
+Ferdowsi University of Mashhad
+
+</div>
+
+## Skills and tools
 
 - Python
 - C
-- c#
-- Git و GitHub
+- C#
+- Git and GitHub
 - LaTeX
-- HTML و CSS
+- HTML and CSS
 {: .tags}
 
-## پروژه‌ها
+## Interests
+
+- Theory of languages and machines
+- Artificial intelligence
+- Optimization
+{: .tags}
+
+## Projects
+
 <div class="card" markdown="1">
 
-### [پروژه KNN](https://github.com/Hasti-Soltani/knn)
+### [k-Nearest Neighbors](https://github.com/hasti-soltani/knn)
 
+An implementation of the k-nearest neighbors (KNN) algorithm, built for the Machine Learning course.
 
-[مشاهده کد در GitHub](https://github.com/Hasti-Soltani/knn)
+[View code on GitHub](https://github.com/hasti-soltani/knn)
 
-*درس یادگیری ماشین، ۱۴۰۵*
+*Machine Learning, 2026*
 
 </div>
 
 <div class="card" markdown="1">
 
-### [مسئله p-center](https://github.com/hasti-soltani/p-center-project)
+### [The p-center problem](https://github.com/hasti-soltani/p-center-project)
 
-بررسی مسئله p-center و روش‌های حل آن. گزارش با LaTeX نوشته شده است.
+A study of the p-center problem and methods for solving it. The report is written in LaTeX.
 
-[مشاهده گزارش و فایل‌ها در GitHub](https://github.com/hasti-soltani/p-center-project)
+[View report and files on GitHub](https://github.com/hasti-soltani/p-center-project)
 
-*درس بهینه‌سازی پویا، ۱۴۰۳*
+*Dynamic Optimization, 2024*
 
 </div>
+
 <div class="card" markdown="1">
 
-### [بازی چکرز](https://github.com/hasti-soltani/checkers-project)
+### [Checkers](https://github.com/hasti-soltani/checkers-project)
 
-پیاده‌سازی بازی چکرز.
+An implementation of the game of checkers, built for the Artificial Intelligence course.
 
-[مشاهده کد در GitHub](https://github.com/hasti-soltani/checkers-project)
+[View code on GitHub](https://github.com/hasti-soltani/checkers-project)
 
-*درس هوش مصنوعی، ۱۴۰۲*
+*Artificial Intelligence, 2023*
 
 </div>
+
 <div class="card" markdown="1">
 
-### [سودوکو](https://github.com/hasti-soltani/sudoku-project)
+### [Sudoku solver](https://github.com/hasti-soltani/sudoku-project)
 
-حل سودوکو.
+A Sudoku solver built for the Artificial Intelligence course.
 
-[مشاهده کد در GitHub](https://github.com/hasti-soltani/sudoku-project)
+[View code on GitHub](https://github.com/hasti-soltani/sudoku-project)
 
-*درس هوش مصنوعی، ۱۴۰۲*
+*Artificial Intelligence, 2023*
 
 </div>
 
+## Notes
 
-## ارتباط با من
+<div class="card" markdown="1">
+
+### Building my first personal page with GitHub Pages
+
+I learned that a repository named `username.github.io` turns into a real website. The most important detail was getting the repository name exactly right.
+
+*November 2026*
+
+</div>
+
+## Contact
 
 - [GitHub](https://github.com/hasti-soltani)
 {: .links}
