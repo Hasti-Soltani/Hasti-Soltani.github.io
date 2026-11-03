@@ -16,6 +16,16 @@ image: photo.jpg
 {: .tags}
 
 ## پروژه‌ها
+<div class="card" markdown="1">
+
+### [پروژه KNN](https://github.com/hasti-soltani/knn-)
+
+
+[مشاهده کد در GitHub](https://github.com/hasti-soltani/knn)
+
+*درس یادگیری ماشین، ۱۴۰۵*
+
+</div>
 
 <div class="card" markdown="1">
 
