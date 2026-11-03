@@ -1,170 +1,463 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#2f3b48">
-  <title>{{ page.title }}</title>
+
+  <title>
+    {% if page.title %}{{ page.title }} | {% endif %}{{ site.title | default: "Hasti Soltani" }}
+  </title>
+
+  <meta name="description" content="{{ site.description | default: 'Personal academic website of Hasti Soltani' }}">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
     :root {
-      --bg: #f1f4f7;
+      --bg: #f7f8fa;
       --surface: #ffffff;
-      --ink: #1f262e;
-      --muted: #5f6b78;
-      --line: #dce2e9;
-      --accent: #15699f;
-      --accent-soft: #dcecf7;
-      --sky: #5bb5e6;
-      --hero-a: #2f3b48;
-      --hero-b: #3f6f94;
+      --ink: #24364a;
+      --muted: #718092;
+      --line: #dce3e9;
+      --blue: #7faecc;
+      --blue-light: #e5eff6;
+      --blue-dark: #45677e;
+      --footer: #48677b;
+      --shadow: 0 12px 34px rgba(36, 54, 74, 0.06);
     }
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #12161b;
-        --surface: #1b2128;
-        --ink: #e9edf1;
-        --muted: #9aa6b2;
-        --line: #2b333c;
-        --accent: #7cc4ee;
-        --accent-soft: #1f3342;
-        --sky: #7cc4ee;
-        --hero-a: #1a2028;
-        --hero-b: #26485f;
-      }
+
+    * {
+      box-sizing: border-box;
     }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
     body {
       margin: 0;
       background: var(--bg);
       color: var(--ink);
-      font-family: "Vazirmatn", Tahoma, sans-serif;
-      font-size: 17px;
-      line-height: 1.95;
+      font-family: "Inter", sans-serif;
+      font-size: 15px;
+      line-height: 1.75;
+      text-align: left;
     }
-    a { color: var(--accent); text-underline-offset: 4px; }
-    a:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
 
-    /* Hero */
-    .hero {
-      background: linear-gradient(135deg, var(--hero-a), var(--hero-b));
-      color: #fff;
-      padding: 4rem 1.25rem 4.5rem;
-      border-bottom: 5px solid var(--sky);
+    a {
+      color: var(--blue-dark);
+      text-decoration: none;
     }
-    .hero-inner {
-      max-width: 760px;
+
+    a:hover {
+      color: #294c65;
+      text-decoration: underline;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(255, 255, 255, 0.94);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(12px);
+    }
+
+    .nav-wrap {
+      width: min(1080px, calc(100% - 40px));
+      min-height: 70px;
       margin: 0 auto;
       display: flex;
       align-items: center;
-      gap: 1.75rem;
-      flex-wrap: wrap;
-    }
-    .avatar {
-      width: 132px;
-      height: 132px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 4px solid rgba(255, 255, 255, 0.55);
-      background: #fff;
-    }
-    .hero h1 {
-      margin: 0;
-      font-size: clamp(2.3rem, 8vw, 3.8rem);
-      font-weight: 800;
-      line-height: 1.25;
-    }
-    .hero p {
-      margin: 0.5rem 0 0;
-      font-size: 1.15rem;
-      color: rgba(255, 255, 255, 0.85);
-      max-width: 38ch;
+      justify-content: space-between;
+      gap: 24px;
     }
 
-    main { max-width: 760px; margin: 0 auto; padding: 0 1.25rem 3rem; }
-
-    h2 {
-      display: flex;
-      align-items: center;
-      gap: 0.7rem;
-      font-size: 1.5rem;
-      margin: 3rem 0 1.1rem;
-    }
-    h2::before {
-      content: "";
-      width: 6px;
-      height: 1.4rem;
-      border-radius: 3px;
-      background: var(--sky);
-    }
-    main > p:first-child { margin-top: 2.5rem; }
-
-    /* Skills as pills: add {: .tags} under the list */
-    ul.tags { display: flex; flex-wrap: wrap; gap: 0.6rem; padding: 0; list-style: none; }
-    ul.tags li {
-      background: var(--accent-soft);
-      color: var(--accent);
-      padding: 0.1rem 1rem;
-      border-radius: 999px;
-      font-weight: 500;
-      font-size: 0.95rem;
-    }
-
-    /* Project and note cards: wrap in <div class="card" markdown="1"> */
-    .card {
-      background: var(--surface);
-      border: 1px solid var(--line);
-      border-inline-start: 5px solid var(--sky);
-      border-radius: 12px;
-      padding: 1.1rem 1.4rem;
-      margin-bottom: 1.1rem;
-    }
-    .card h3 { margin: 0 0 0.3rem; font-size: 1.2rem; }
-    .card p { margin: 0.3rem 0; color: var(--muted); font-size: 0.98rem; }
-    .card em { font-size: 0.88rem; color: var(--muted); font-style: normal; }
-
-    /* Contact links as buttons: add {: .links} under the list */
-    ul.links { display: flex; flex-wrap: wrap; gap: 0.75rem; padding: 0; list-style: none; }
-    ul.links a {
-      display: inline-block;
-      padding: 0.45rem 1.2rem;
-      border-radius: 10px;
-      background: var(--surface);
-      border: 1px solid var(--line);
+    .brand {
       color: var(--ink);
-      text-decoration: none;
-      font-weight: 500;
+      font-weight: 700;
+      letter-spacing: -0.04em;
+      white-space: nowrap;
     }
-    ul.links a:hover { border-color: var(--accent); color: var(--accent); }
 
-    footer {
-      text-align: center;
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 8px 22px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .nav-links a {
       color: var(--muted);
-      font-size: 0.88rem;
-      padding: 1.8rem 1rem;
+    }
+
+    .nav-links a:hover {
+      color: var(--blue-dark);
+      text-decoration: none;
+    }
+
+    .page-wrap {
+      width: min(1080px, calc(100% - 40px));
+      margin: 64px auto 80px;
+    }
+
+    .hero {
+      padding: 52px 56px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+    }
+
+    .eyebrow,
+    .section-number {
+      color: var(--blue-dark);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    h1, h2, h3 {
+      color: var(--ink);
+      line-height: 1.2;
+    }
+
+    h1 {
+      margin: 12px 0 14px;
+      font-family: "DM Serif Display", Georgia, serif;
+      font-size: clamp(42px, 7vw, 66px);
+      font-weight: 400;
+      letter-spacing: -0.035em;
+    }
+
+    .hero-intro {
+      max-width: 720px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .hero-rule {
+      width: 54px;
+      height: 3px;
+      margin-top: 28px;
+      background: var(--blue);
+      border-radius: 5px;
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 260px;
+      gap: 28px;
+      margin-top: 28px;
+      align-items: start;
+    }
+
+    .main-column,
+    .side-column {
+      display: grid;
+      gap: 22px;
+    }
+
+    .section,
+    .side-card {
+      padding: 30px 34px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+    }
+
+    .section-heading {
+      display: flex;
+      align-items: baseline;
+      gap: 13px;
+      margin-bottom: 18px;
+    }
+
+    .section-heading h2 {
+      margin: 0;
+      font-family: "DM Serif Display", Georgia, serif;
+      font-size: 27px;
+      font-weight: 400;
+    }
+
+    .section p {
+      margin: 0 0 13px;
+    }
+
+    .section p:last-child {
+      margin-bottom: 0;
+    }
+
+    .lead {
+      color: var(--ink);
+      font-size: 16px;
+    }
+
+    .meta-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .meta-item {
+      padding: 13px 14px;
+      background: var(--blue-light);
+      border-radius: 10px;
+    }
+
+    .meta-item span {
+      display: block;
+      color: var(--blue-dark);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+    }
+
+    .meta-item strong {
+      display: block;
+      margin-top: 3px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .side-card h3 {
+      margin: 0 0 14px;
+      font-family: "DM Serif Display", Georgia, serif;
+      font-size: 22px;
+      font-weight: 400;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .tag-list li {
+      padding: 5px 10px;
+      color: var(--blue-dark);
+      background: var(--blue-light);
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    .education-item + .education-item {
+      margin-top: 20px;
+      padding-top: 20px;
       border-top: 1px solid var(--line);
     }
-    code { direction: ltr; unicode-bidi: embed; background: var(--accent-soft); padding: 0 0.35rem; border-radius: 4px; }
+
+    .education-item h3 {
+      margin: 0 0 5px;
+      font-size: 15px;
+    }
+
+    .education-item p,
+    .small-muted {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .project-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .project-card {
+      display: block;
+      padding: 19px;
+      color: var(--ink);
+      background: #fbfcfd;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+
+    .project-card:hover {
+      border-color: var(--blue);
+      transform: translateY(-2px);
+      text-decoration: none;
+    }
+
+    .project-card h3 {
+      margin: 0 0 7px;
+      font-size: 15px;
+    }
+
+    .project-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .contact-link {
+      display: inline-block;
+      margin-top: 5px;
+      padding: 9px 15px;
+      color: white;
+      background: var(--blue-dark);
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .contact-link:hover {
+      color: white;
+      background: #34566d;
+      text-decoration: none;
+    }
+
+    .site-footer {
+      padding: 25px 20px;
+      color: rgba(255,255,255,0.85);
+      background: var(--footer);
+      text-align: center;
+      font-size: 12px;
+    }
+
+    @media (max-width: 760px) {
+      .nav-wrap {
+        padding: 14px 0;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .nav-links {
+        justify-content: flex-start;
+        gap: 7px 15px;
+      }
+
+      .page-wrap {
+        margin-top: 28px;
+      }
+
+      .hero {
+        padding: 34px 25px;
+      }
+
+      .content-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section,
+      .side-card {
+        padding: 25px 23px;
+      }
+
+      .meta-list {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .project-list {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-wrap,
+      .page-wrap {
+        width: min(100% - 28px, 1080px);
+      }
+    }
   </style>
 </head>
+
 <body>
-  <header class="hero">
-    <div class="hero-inner">
-      {% if page.image %}<img class="avatar" src="{{ page.image | relative_url }}" alt="عکس {{ page.title }}">{% endif %}
-      <div>
-        <h1>{{ page.title }}</h1>
-        {% if page.subtitle %}<p>{{ page.subtitle }}</p>{% endif %}
-      </div>
+
+  <header class="site-header">
+    <div class="nav-wrap">
+
+      <a class="brand" href="{{ '/' | relative_url }}">
+        Hasti Soltani
+      </a>
+
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="{{ '/' | relative_url }}#about">About</a>
+        <a href="{{ '/' | relative_url }}#skills">Skills</a>
+        <a href="{{ '/' | relative_url }}#education">Education</a>
+        <a href="{{ '/' | relative_url }}#interests">Interests</a>
+        <a href="{{ '/' | relative_url }}#projects">Projects</a>
+        <a href="{{ '/' | relative_url }}#contact">Contact</a>
+      </nav>
+
     </div>
   </header>
 
-  <main>
-    {{ content }}
+  <main class="page-wrap">
+
+    <section class="hero">
+      <div class="eyebrow">Personal academic website</div>
+
+      <h1>
+        {{ page.title | default: site.title | default: "Hasti Soltani" }}
+      </h1>
+
+      <p class="hero-intro">
+        M.Sc. student in Soft Computing and Artificial Intelligence
+        at Ferdowsi University of Mashhad, interested in optimization,
+        machine learning, and theoretical foundations of computer science.
+      </p>
+
+      <div class="hero-rule"></div>
+    </section>
+
+    <div class="content-grid">
+
+      <div class="main-column">
+        {{ content }}
+      </div>
+
+      <aside class="side-column">
+
+        <section class="side-card" id="skills">
+          <h3>Skills &amp; Tools</h3>
+
+          <ul class="tag-list">
+            <li>Python</li>
+            <li>C</li>
+            <li>C#</li>
+            <li>Git &amp; GitHub</li>
+            <li>LaTeX</li>
+            <li>HTML</li>
+            <li>CSS</li>
+          </ul>
+        </section>
+
+        <section class="side-card">
+          <h3>Research interests</h3>
+
+          <ul class="tag-list">
+            <li>Artificial Intelligence</li>
+            <li>Optimization</li>
+            <li>Machine Learning</li>
+            <li>Theory of Computation</li>
+          </ul>
+        </section>
+
+      </aside>
+
+    </div>
   </main>
 
-  <footer>© ۱۴۰۵ {{ page.title }}</footer>
+  <footer class="site-footer">
+    © {{ site.time | date: "%Y" }} Hasti Soltani · Built with GitHub Pages
+  </footer>
+
 </body>
 </html>
