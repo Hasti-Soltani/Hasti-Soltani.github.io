@@ -1,2 +1,170 @@
-title: هستی سلطانی
-lang: fa
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#2f3b48">
+  <title>{{ page.title }}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f1f4f7;
+      --surface: #ffffff;
+      --ink: #1f262e;
+      --muted: #5f6b78;
+      --line: #dce2e9;
+      --accent: #15699f;
+      --accent-soft: #dcecf7;
+      --sky: #5bb5e6;
+      --hero-a: #2f3b48;
+      --hero-b: #3f6f94;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #12161b;
+        --surface: #1b2128;
+        --ink: #e9edf1;
+        --muted: #9aa6b2;
+        --line: #2b333c;
+        --accent: #7cc4ee;
+        --accent-soft: #1f3342;
+        --sky: #7cc4ee;
+        --hero-a: #1a2028;
+        --hero-b: #26485f;
+      }
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: "Inter", -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: 17px;
+      line-height: 1.75;
+    }
+    a { color: var(--accent); text-underline-offset: 4px; }
+    a:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, var(--hero-a), var(--hero-b));
+      color: #fff;
+      padding: 4rem 1.25rem 4.5rem;
+      border-bottom: 5px solid var(--sky);
+    }
+    .hero-inner {
+      max-width: 760px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 1.75rem;
+      flex-wrap: wrap;
+    }
+    .avatar {
+      width: 132px;
+      height: 132px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid rgba(255, 255, 255, 0.55);
+      background: #fff;
+    }
+    .hero h1 {
+      margin: 0;
+      font-size: clamp(2.3rem, 8vw, 3.8rem);
+      font-weight: 800;
+      line-height: 1.25;
+    }
+    .hero p {
+      margin: 0.5rem 0 0;
+      font-size: 1.15rem;
+      color: rgba(255, 255, 255, 0.85);
+      max-width: 44ch;
+    }
+
+    main { max-width: 760px; margin: 0 auto; padding: 0 1.25rem 3rem; }
+
+    h2 {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      font-size: 1.5rem;
+      margin: 3rem 0 1.1rem;
+    }
+    h2::before {
+      content: "";
+      width: 6px;
+      height: 1.4rem;
+      border-radius: 3px;
+      background: var(--sky);
+    }
+    main > p:first-child { margin-top: 2.5rem; }
+
+    /* Skills as pills: add {: .tags} under the list */
+    ul.tags { display: flex; flex-wrap: wrap; gap: 0.6rem; padding: 0; list-style: none; }
+    ul.tags li {
+      background: var(--accent-soft);
+      color: var(--accent);
+      padding: 0.1rem 1rem;
+      border-radius: 999px;
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    /* Project and note cards: wrap in <div class="card" markdown="1"> */
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-inline-start: 5px solid var(--sky);
+      border-radius: 12px;
+      padding: 1.1rem 1.4rem;
+      margin-bottom: 1.1rem;
+    }
+    .card h3 { margin: 0 0 0.3rem; font-size: 1.2rem; }
+    .card p { margin: 0.3rem 0; color: var(--muted); font-size: 0.98rem; }
+    .card em { font-size: 0.88rem; color: var(--muted); font-style: normal; }
+
+    /* Contact links as buttons: add {: .links} under the list */
+    ul.links { display: flex; flex-wrap: wrap; gap: 0.75rem; padding: 0; list-style: none; }
+    ul.links a {
+      display: inline-block;
+      padding: 0.45rem 1.2rem;
+      border-radius: 10px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      color: var(--ink);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    ul.links a:hover { border-color: var(--accent); color: var(--accent); }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.88rem;
+      padding: 1.8rem 1rem;
+      border-top: 1px solid var(--line);
+    }
+    code { direction: ltr; unicode-bidi: embed; background: var(--accent-soft); padding: 0 0.35rem; border-radius: 4px; }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      {% if page.image %}<img class="avatar" src="{{ page.image | relative_url }}" alt="Photo of {{ page.title }}">{% endif %}
+      <div>
+        <h1>{{ page.title }}</h1>
+        {% if page.subtitle %}<p>{{ page.subtitle }}</p>{% endif %}
+      </div>
+    </div>
+  </header>
+
+  <main>
+    {{ content }}
+  </main>
+
+  <footer>© 2026 {{ page.title }}</footer>
+</body>
+</html>
